@@ -418,5 +418,5 @@
 })(
     'undefined' == typeof module ? module = {} : module
   , 'undefined' == typeof io ? require('socket.io-client') : io
-  , 'undefined' == typeof should ? require('should-browser') : should
+  , 'undefined' == typeof should ? require('../support/should') : should
 );

@@ -116,5 +116,5 @@
 })(
     'undefined' == typeof module ? module = {} : module
   , 'undefined' == typeof io ? require('socket.io-client') : io
-  , 'undefined' == typeof should || !should.fail ? require('should') : should
+  , 'undefined' == typeof should || !should.fail ? require('../support/should') : should
 );

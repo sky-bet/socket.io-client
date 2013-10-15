@@ -6,7 +6,7 @@
  */
 
 var vm = require('vm')
-  , should = require('should');
+  , should = require('../../support/should');
 
 /**
  * Generates evn variables for the vm so we can `emulate` a browser.
@@ -79,6 +79,9 @@ exports.env = function env () {
   // document
   details.document = details;
   details.document.domain = details.location.href;
+
+  // Allows the builder test to run without falling over trying to detect if the browser is Firefox
+  details.document.documentElement = {style: {}};
 
   return details;
 };
